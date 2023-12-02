@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;    
+}
+
+
+.home{
+    min-height: 100vh;
+
+}
+
+html, body {
+    height: 100%;
+}
+body{
+    background-image: url(/MULTIMEDIA/Fondo\ iContact.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: calc(5rem + 1rem);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(82, 62, 2, 0.542);
+    border-bottom: 2px solid rgba(0,0,0,0);
+    color: rgb(246, 238, 223)
+}
+header .barraDeNavegacion {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 200px;
+    transition: 0.3s ease;
+}
+
+
+.barraDeNavegacion .logo {
+    color: var(--white-color);
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+}
+
+
+.navigation .elementosDeLaBarra a{
+    color: var(--white-color);
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+    font-family: 'Poppins', sans-serif;
+}
+.navigation .elementosDeLaBarra a i{
+    display: none;
+}
+.navigation .elementosDeLaBarra a:not(:last-child){
+    margin-right: 45px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(89, 82, 66, 0.933);
+    color: white;
+    text-align: center;
+    padding: 10px 0; 
+}

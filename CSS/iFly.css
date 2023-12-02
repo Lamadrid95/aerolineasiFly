@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;    
+}
+
+
+.home{
+    min-height: 100vh;
+
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    background-image: url(/MULTIMEDIA/Fondo\ iFly.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: calc(5rem + 1rem);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+header .barraDeNavegacion {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 200px;
+    transition: 0.3s ease;
+}
+
+
+.barraDeNavegacion .logo {
+    color: var(--white-color);
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+}
+
+
+.navigation .elementosDeLaBarra a{
+    color: var(--white-color);
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+    font-family: 'Poppins', sans-serif;
+}
+.navigation .elementosDeLaBarra a i{
+    display: none;
+}
+.navigation .elementosDeLaBarra a:not(:last-child){
+    margin-right: 45px;
+}
+
+.section {
+    font-family: 'Poppins', sans-serif;
+}
+
+.formularioBusqueda h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
+}
+.formularioBusqueda form label {
+    font-family: 'Poppins', sans-serif;
+}
+.formularioBusqueda form select{
+    font-family: 'Poppins', sans-serif;
+}
+.formularioBusqueda form input[type="date"]{
+    font-family: 'Poppins', sans-serif;
+    width: auto;
+}
+.formularioBusqueda form input[type="number"]{
+    font-family: 'Poppins', sans-serif;
+}
+.formularioBusqueda form input[type="submit"] {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    width: 50%; 
+    margin-left: 25%; 
+}
+
+
+.formularioBusqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.formulario-container {
+    background-color: rgba(166, 140, 89, 0.802);
+    padding: 20px;
+    max-width: 500px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-container select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fffffff1;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 0;
+}
+/* Color para seleccionar cualquier elemento */
+::selection {
+    background-color: rgba(220, 198, 150, 0.96); /* Color de fondo */
+    color: #000000; /* Color del texto */
+}
