@@ -58,12 +58,11 @@ header .barraDeNavegacion{
     justify-content: space-between;
     padding: 0 200px;
     transition: 0.3s ease;
-
+    font-size:100%;
 }
 
 .nav-close-btn, .nav-menu-btn{
     display: none;
-
 }
 
 .barraDeNavegacion .logo{
@@ -81,6 +80,7 @@ header .barraDeNavegacion{
     font-size: 1em;
     text-decoration: none;
     text-shadow: var(--text-shadow);
+    font-family: 'Poppins', sans-serif;
 }
 
 .navigation .elementosDeLaBarra a i{
@@ -94,7 +94,6 @@ header .barraDeNavegacion{
 /* home */
 .home{
     min-height: 100vh;
-
 }
 
 /* Background slider */

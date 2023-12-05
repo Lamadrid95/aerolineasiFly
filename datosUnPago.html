@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <link rel="shortcut icon" href="/MULTIMEDIA/iconoPrincipal.png" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/CSS/datosPersonales.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Directa</title>
+</head>
+<body>
+    <header>
+        <div class="barraDeNavegacion">
+            <a href="index.html" class="logo">iFly</a>
+            <div class="navigation">
+                <div class="elementosDeLaBarra">
+                    <i class="uil uil-items nav-close-btn"></i>
+                    <a href="iFinance.html"><i class="uil uil-finance"></i>iFinance</a>
+                    <a href="iDiscover.html"><i class="uil uil-discover"></i>iDiscover</a>
+                    <a href="iLearn.html"><i class="uil uil-learn"></i>iLearn</a>
+                    <a href="iContact.html"><i class="uil uil-contact"></i>iContact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="formularioBusqueda">
+        <div class="formulario-container">
+            <h2>DATOS DE COMPRA</h2>
+            <form action="" method="post" id="formularioVuelo">
+                <input type="text" name="nombres" id="nombres" placeholder="Nombres">
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+                <input type="text" name="DNI" id="DNI" pattern="\d+" title="Por favor, ingresa solo números" placeholder="DNI o Pasaporte" required>             
+                <input type="text" name="nacionalidad" id="nacionalidad" placeholder="Nacionalidad">      
+                <input type="text" name="email" id="email" placeholder="Correo electrónico">
+                <label for="tarjeta">Número de tarjeta Débito</label>
+                <input type="text" name="tarjeta" id="tarjeta" pattern="[0-9]{2}/[0-9]{2}" maxlength="18" title="Por favor, ingresa solo números" required>
+                <input type="text" name="CVC" id="CVC" placeholder="CVC o CVV" maxlength="3">
+                <input type="number" name="vencimiento" id="vencimiento" min="1" max="12" maxlength="2" placeholder="Vence (MM)" required>
+                <input type="number" name="anio" id="anio" min="2024" max="2099" maxlength="4" step="1" placeholder="Año (2024-2099)" required>
+                <input type="submit" value="Generar Tarjeta">                
+            </form>
+        </div>
+    </section>        
+        <script src="/JS/swiper-bundle.min.js"></script>
+        <script src="/JS/iFly.js"></script>
+        <script src="/JS/main.js"></script>
+    <footer class="footer">
+        <p>&copy;2023 Omar Lamadrid derechos reservados &check;</p>
+    </footer>
+</body>
+</html>

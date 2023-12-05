@@ -1,28 +1,48 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@500&family=Great+Vibes&family=Lobster+Two:ital@0;1&family=Merriweather:ital,wght@0,400;1,300&family=Passion+One:wght@900&family=Pixelify+Sans:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Variables CSS */
+:root{
+    --white-color: #fff;
+    --dark-color: #222;
+    --body-bg-color: #fff;
+    --section-bg-color: #202834;
+    --navigation-item-hover-color: #3b5378;
+
+    --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+
+    --scroll-bar-color: #fff;
+    --scroll-thumb-color: #282f4e;
+    --scroll-thumb-hover-color: #454f6b;
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;    
 }
-
-
-.home{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+  
 html, body {
     height: 100%;
 }
 
 body{
-    background-image: url(/MULTIMEDIA/Fondo\ iFinance.jpg);
+    background: var(--body-bg-color);
+    background-image: url(/MULTIMEDIA/Financia\ tu\ vuelo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.home{
+    min-height: 100vh;
+}
+
+
 header {
     z-index: 999;
     position: fixed;
@@ -32,10 +52,8 @@ header {
     left: 0;
     display: flex;
     justify-content: center;
-    background-color: rgba(51, 30, 8, 0.429);
-    border-bottom: 2px solid rgba(0,0,0,0);
-    color: rgb(247, 241, 233);
 }
+
 header .barraDeNavegacion {
     position: relative;
     width: 100%;
@@ -47,7 +65,15 @@ header .barraDeNavegacion {
     font-size:100%;
 }
 
+.swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    padding: 0 auto;
+}
 
+.nav-close-btn, .nav-menu-btn{
+    display: none;
+}
 .barraDeNavegacion .logo {
     color: var(--white-color);
     font-size: 1.8em;
@@ -73,12 +99,75 @@ header .barraDeNavegacion {
     margin-right: 45px;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333333db;
-    color: white;
+.footer{
     text-align: center;
-    padding: 10px 0; 
+}
+
+
+
+/* nuevos cambios */
+.swiper-slide .text-content {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    right: 20%;
+    bottom: auto;
+    margin: 10 10px;
+    transition: 0.3s ease;
+    color: var(--white-color);
+    text-align: center;
+    max-width: 80%;
+    background-color: rgba(255, 255, 255, 0.039);
+    border-radius: 10px;
+}
+
+
+.swiper-slide-active .text-content .title{
+    transform: translateY(-15px);
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: 0.3s;
+    transition-property: transform, opacity;
+}
+.swiper-slide .text-content h2.title {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.swiper-slide .text-content p {
+    text-align: justify;
+    max-width: 700%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    text-shadow: var(--text-shadow);
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--box-shadow);
+    transform: translateX(-80px);
+    opacity: 0;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+.swiper-slide-active .text-content p{
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: 0.3s;
+    transition-property: transform, opacity;
+}
+
+.swiper-slide .text-content .go-btn i{
+    font-size: 1.6em;
+    transition: 0.3s ease;
+}
+.swiper-slide .text-content .go-btn:hover i{
+    transform: translateX(5px);    
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
 }
