@@ -24,7 +24,16 @@
                     </div>
                 </div>
             </div>
-        </header>                
+        </header>
+        <form id="contactForm" action="/index.html" method="POST">
+        <input placeholder="Nombre" id="name" name="name" required><br><br>
+        <input placeholder="Email" id="email" name="email" required><br><br>
+        <textarea placeholder="Deja tu mensaje aquí y responderemos a la brevedad." id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Enviar">
+        </form>
+        <div class="rotating-text-wrapper" id="messageContainer">
+            <h2>¡Gracias por tu mensaje!</h2>
+        </div>                
             <script src="/JS/swiper-bundle.min.jsswiper-bundle.min.js"></script>
             <script src="/JS/iFly.js/iFly.js"></script>
             <script src="/JS/main.js/main.js"></script>

@@ -28,21 +28,22 @@
     <section class="formularioBusqueda">
         <div class="formulario-container">
             <h2>DATOS DE COMPRA</h2>
-            <form action="" method="post" id="formularioVuelo">
+            <form action="" method="post" id="formularioVueloComprado">
                 <input type="text" name="nombres" id="nombres" placeholder="Nombres">
                 <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
                 <input type="text" name="DNI" id="DNI" pattern="\d+" title="Por favor, ingresa solo números" placeholder="DNI o Pasaporte" required>             
                 <input type="text" name="nacionalidad" id="nacionalidad" placeholder="Nacionalidad">      
                 <input type="text" name="email" id="email" placeholder="Correo electrónico">
                 <label for="tarjeta">Número de tarjeta Débito</label>
-                <input type="text" name="tarjeta" id="tarjeta" pattern="[0-9]{2}/[0-9]{2}" maxlength="18" title="Por favor, ingresa solo números" required>
+                <input type="text" name="tarjeta" id="tarjeta" pattern="[0-9]+" maxlength="18" title="Por favor, ingresa solo números" required>
                 <input type="text" name="CVC" id="CVC" placeholder="CVC o CVV" maxlength="3">
                 <input type="number" name="vencimiento" id="vencimiento" min="1" max="12" maxlength="2" placeholder="Vence (MM)" required>
                 <input type="number" name="anio" id="anio" min="2024" max="2099" maxlength="4" step="1" placeholder="Año (2024-2099)" required>
-                <input type="submit" value="Generar Tarjeta">                
+                <input type="submit" value="Generar Tarjeta">              
             </form>
         </div>
-    </section>        
+    </section>
+        <script src="/DOC/jspdf.min.js"></script>     
         <script src="/JS/swiper-bundle.min.js"></script>
         <script src="/JS/iFly.js"></script>
         <script src="/JS/main.js"></script>

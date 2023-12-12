@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const role = document.getElementById('role').value;
 
     // Validamos las credenciales (reemplaza con tus propias validaciones)
-    if (username === 'persona' && password === '12345') {
+    if (username === 'ifly' && password === '12345') {
         if (role === 'user') {
             // Redireccionamos al usuario común a iFly.html
             window.location.href = '/iFly.html';

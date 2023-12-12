@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // Seleccionar los campos
+const dniInput = document.getElementById('DNI');
 const vencimientoInput = document.getElementById('vencimiento');
 const cvcInput = document.getElementById('CVC');
 const anioInput = document.getElementById('anio');
@@ -80,16 +81,138 @@ function soloNumeros(input) {
     });
   }
   
-  // Aplicar la función a los campos
+  // Aplicamos la función a los campos
   soloNumeros(vencimientoInput);
   soloNumeros(cvcInput);
   soloNumeros(anioInput);
   soloNumeros(tarjetaInput);
-  
 
-  // DNI
-  const dniInput = document.getElementById('DNI');
 
 dniInput.addEventListener('input', function(event) {
     this.value = this.value.replace(/\D/g, ''); // Remueve todos los caracteres que no sean dígitos
 });
+
+// Generar un PDF a partir de datosUnPago.html
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('formularioVueloComprado');
+    
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Obtener los valores del formulario
+        const nombres = document.getElementById('nombres').value;
+        const apellidos = document.getElementById('apellidos').value;
+        const dni = document.getElementById('DNI').value;
+        const nacionalidad = document.getElementById('nacionalidad').value;
+        const email = document.getElementById('email').value;
+        const tarjeta = document.getElementById('tarjeta').value;
+        const cvc = document.getElementById('CVC').value;
+        const vencimiento = document.getElementById('vencimiento').value;
+        const anio = document.getElementById('anio').value;
+        
+        // Generar un número aleatorio para la tarjeta de embarque
+        const numeroAleatorio = Math.floor(Math.random() * 10000000000); 
+
+        // Crear un nuevo documento jsPDF
+        const doc = new jsPDF();
+
+        // Agregar la información al PDF
+        doc.text(20, 20, `Nombres: ${nombres}`);
+        doc.text(20, 30, `Apellidos: ${apellidos}`);
+        doc.text(20, 40, `DNI: ${dni}`);
+        doc.text(20, 50, `Nacionalidad: ${nacionalidad}`);
+        doc.text(20, 60, `Correo electrónico: ${email}`);
+        doc.text(20, 70, `Número de tarjeta: ${tarjeta}`);
+        doc.text(20, 80, `CVC: ${cvc}`);
+        doc.text(20, 90, `Vencimiento: ${vencimiento}`);
+        doc.text(20, 100, `Año: ${anio}`);
+        doc.text(20, 110, `Número de Tarjeta de Embarque: ${numeroAleatorio}`);
+
+        // Descargar el PDF
+        doc.save('Datos del cliente.pdf');
+    });
+});
+
+// Generar un PDF a partir de datosConTarjeta.html
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('formularioVueloTarjeta');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Obtener los valores del formulario
+        const nombres = document.getElementById('nombres').value;
+        const apellidos = document.getElementById('apellidos').value;
+        const dni = document.getElementById('DNI').value;
+        const nacionalidad = document.getElementById('nacionalidad').value;
+        const email = document.getElementById('email').value;
+        const tarjeta = document.getElementById('tarjeta').value;
+        const cvc = document.getElementById('CVC').value;
+        const vencimiento = document.getElementById('vencimiento').value;
+        const anio = document.getElementById('anio').value;
+        const cuotas = document.getElementById('cuotas').value;
+
+        // Generar un número aleatorio para la tarjeta de embarque
+        const numeroAleatorio = Math.floor(Math.random() * 10000000000); 
+
+        // Crear un nuevo documento jsPDF
+        const doc = new jsPDF();
+
+          // Agregar la información al PDF
+          doc.text(20, 20, `Nombres: ${nombres}`);
+          doc.text(20, 30, `Apellidos: ${apellidos}`);
+          doc.text(20, 40, `DNI: ${dni}`);
+          doc.text(20, 50, `Nacionalidad: ${nacionalidad}`);
+          doc.text(20, 60, `Correo electrónico: ${email}`);
+          doc.text(20, 70, `Número de tarjeta: ${tarjeta}`);
+          doc.text(20, 80, `CVC: ${cvc}`);
+          doc.text(20, 90, `Mes de vencimiento: ${vencimiento}`);
+          doc.text(20, 100, `Año: ${anio}`);
+          doc.text(20, 110, `Número de Tarjeta de Embarque: ${numeroAleatorio}`);
+          doc.text(20, 120, `Cuotas: ${cuotas}`);
+  
+
+
+        // Descargar el PDF
+        doc.save('Datos de financiaciento.pdf');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('formularioVueloMercado');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Obtener los valores del formulario
+        const nombres = document.getElementById('nombres').value;
+        const apellidos = document.getElementById('apellidos').value;
+        const dni = document.getElementById('DNI').value;
+        const nacionalidad = document.getElementById('nacionalidad').value;
+        const email = document.getElementById('email').value;
+        const alias = document.getElementById('alias').value;
+        const tarjeta = document.getElementById('tarjeta').value;
+
+        // Generar un número aleatorio para el alias de Mercadopago
+        const numeroAleatorio = Math.floor(Math.random() * 10000000000); // Cambia el rango según tus necesidades
+
+        // Crear un nuevo documento jsPDF
+        const doc = new jsPDF();
+
+        // Agregar la información al PDF
+        doc.text(20, 20, `Nombres: ${nombres}`);
+        doc.text(20, 30, `Apellidos: ${apellidos}`);
+        doc.text(20, 40, `DNI: ${dni}`);
+        doc.text(20, 50, `Nacionalidad: ${nacionalidad}`);
+        doc.text(20, 60, `Correo electrónico: ${email}`);
+        doc.text(20, 70, `Alias de Mercadopago: ${alias}`);
+        doc.text(20, 80, `CBU de Mercadopago: ${tarjeta}`);
+        doc.text(20, 90, `Número Aleatorio: ${numeroAleatorio}`);
+
+        // Descargar el PDF
+        doc.save('Datos con mercado.pdf');
+    });
+});
+

@@ -28,10 +28,10 @@
     <section class="formularioBusqueda">
         <div class="formulario-container">
             <h2>DATOS DE COMPRA</h2>
-            <form action="" method="post" id="formularioVuelo">
+            <form action="" method="post" id="formularioVueloMercado">
                 <input type="text" name="nombres" id="nombres" placeholder="Nombres">
                 <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
-                <input type="text" name="DNI" id="DNI" pattern="\d+" title="Por favor, ingresa solo números" placeholder="DNI o Pasaporte" required>             
+                <input type="text" name="DNI" id="DNI" title="Por favor, ingresa solo números" placeholder="DNI o Pasaporte" required>             
                 <input type="text" name="nacionalidad" id="nacionalidad" placeholder="Nacionalidad">      
                 <input type="text" name="email" id="email" placeholder="Correo electrónico">
                 <label for="alias">Alias de Mercadopago</label>
@@ -40,7 +40,8 @@
                 <input type="submit" value="Generar Tarjeta">                
             </form>
         </div>
-    </section>        
+    </section>
+        <script src="/DOC/jspdf.min.js"></script>
         <script src="/JS/swiper-bundle.min.js"></script>
         <script src="/JS/iFly.js"></script>
         <script src="/JS/main.js"></script>

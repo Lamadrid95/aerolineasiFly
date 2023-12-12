@@ -28,7 +28,7 @@
     <section class="formularioBusqueda">
         <div class="formulario-container">
             <h2>Selecciona tu destino</h2>
-            <form action="/datosPersonales.html" method="get">
+            <form action="" method="get" id="formularioVuelo">
                 <label for="origen">Origen:</label>
                 <select name="aeropuertoOrigen" id="aeropuertoOrigen"></select> <br>                 
                 <label for="destino">Destino:</label>
@@ -41,14 +41,15 @@
                 <input type="number" id="numeroDePasajeros" name="numeroDePasajeros" min="1" max="10" required><br><br>
                 <label for="financiamiento">Elige tu forma de Financiamiento</label>
                 <select name="opcion" id="opcion">
-                    <option value="ninguna">Ninguna</option>
-                  <option value="mercadoCredito">Mercadocrédito</option>
-                  <option value="cuotas">Cuotas Fijas</option>
+                <option value="ninguna">Ninguna</option>
+                <option value="mercadoCredito">Mercadocrédito</option>
+                <option value="cuotas">Cuotas Fijas</option>
                 </select>
                 <input type="submit" value="Comprar Vuelo">                
             </form>
         </div>
-    </section>        
+    </section>
+        <script src="/DOC/jspdf.min.js"></script>     
         <script src="/JS/swiper-bundle.min.js"></script>
         <script src="/JS/iFly.js"></script>
         <script src="/JS/main.js"></script>
@@ -56,4 +57,4 @@
         <p>&copy;2023 Omar Lamadrid derechos reservados &check;</p>
     </footer>
 </body>
-</html>
+</html> 
